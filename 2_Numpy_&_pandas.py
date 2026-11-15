@@ -19,7 +19,7 @@ numbers = pd.Series([1,2,3,4,5])
 print(numbers)
 student_info = {
     "Name": ["Noman", "Ali", "Ahmed"],
-    "Age": [78,89,90],
+    "Marks": [78,89,90],
     "City": ["Jhang", "Lahore", "Karachi"]
 }
 df = pd.DataFrame(student_info)
@@ -27,3 +27,4 @@ print(df)
 print(df.head())
 print(df.tail())
 print(df.info())
+print(df.describe())
