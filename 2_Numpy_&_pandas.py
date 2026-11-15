@@ -28,3 +28,6 @@ print(df.head())
 print(df.tail())
 print(df.info())
 print(df.describe())
+
+print(df["Name"])
+print(df[["Name", "Marks"]])
