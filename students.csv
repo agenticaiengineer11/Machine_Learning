@@ -1,5 +1,6 @@
-Name,Age,Marks
-Ali,NaN,80
-Ahmed,22,75
-Sara,NaN,90
-Usman,23,85
+Name,Age,Study_Hours,Marks
+Ali,21,2,40
+Ahmed,22,3,60
+Sara,20,4,80
+Usman,23,5,100
+Hassan,21,6,
