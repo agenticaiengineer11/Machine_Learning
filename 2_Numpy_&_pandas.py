@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 marks = np.array([70,30,60,89,90])
 print(marks)
 print("Average Marks: ", np.mean(marks))
@@ -14,3 +15,5 @@ print(numbers / 10)
 data = np.array([[1,2,4],[3,4,5],[3,56,6]])
 print(data)
 print(data.shape)
+numbers = pd.Series([1,2,3,4,5])
+print(numbers)
