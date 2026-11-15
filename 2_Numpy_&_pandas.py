@@ -31,3 +31,9 @@ print(df.describe())
 
 print(df["Name"])
 print(df[["Name", "Marks"]])
+df1 = pd.read_csv("students.csv")
+print(df1)
+print(df1.isnull().sum())
+df1.dropna(inplace =True)
+print(df1)
+
