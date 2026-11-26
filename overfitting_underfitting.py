@@ -1,5 +1,6 @@
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
@@ -25,16 +26,12 @@ for depth in depths:
         random_state=42
     )
 
-    # Train model
     model.fit(X_train, y_train)
 
-    # Training prediction
     train_prediction = model.predict(X_train)
 
-    # Testing prediction
     test_prediction = model.predict(X_test)
 
-    # Calculate accuracy
     train_accuracy = accuracy_score(
         y_train, train_prediction
     )
@@ -46,3 +43,22 @@ for depth in depths:
     print("\nMax Depth:", depth)
     print("Training Accuracy:", train_accuracy)
     print("Testing Accuracy:", test_accuracy)
+
+
+
+model = DecisionTreeClassifier(
+    max_depth=3,
+    random_state=42
+)
+
+scores = cross_val_score(
+    model,
+    X_train,
+    y_train,
+    cv=5,
+    scoring="accuracy"
+)
+
+print("Fold Scores:", scores)
+print("Average Accuracy:", scores.mean())
+
